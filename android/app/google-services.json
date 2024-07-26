@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "991936628843",
+    "project_id": "basicapp-e3efe",
+    "storage_bucket": "basicapp-e3efe.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:991936628843:android:5544d9f04ac2c81aa7492e",
+        "android_client_info": {
+          "package_name": "com.example.crudapp_1"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBj11V3fODmigBSHBkjM_3NrPiFsfBdSvs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
