@@ -2,7 +2,6 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:random_string/random_string.dart';
-
 import '../service/database.dart';
 
 class Employee extends StatefulWidget {
@@ -118,28 +117,30 @@ class _EmployeeState extends State<Employee> {
                 child: ElevatedButton(
                     onPressed: () async {
                       String Id = randomAlphaNumeric(10);
-                      Map<String,dynamic> employeeInfoMap = {
+                      Map<String, dynamic> employeeInfoMap = {
                         "Name": nameController.text,
                         "Age": ageController.text,
                         "Id": Id,
                         "Location": locationController.text,
                       };
-                      await DatabaseMethods().addEmployeeDetails(employeeInfoMap, Id).then((value) {
+                      await DatabaseMethods()
+                          .addEmployeeDetails(employeeInfoMap, Id)
+                          .then((value) {
                         Fluttertoast.showToast(
-                            msg: "Employee details has been uploaded successfully",
+                            msg:
+                                "Employee details has been uploaded successfully",
                             toastLength: Toast.LENGTH_SHORT,
                             gravity: ToastGravity.CENTER,
                             timeInSecForIosWeb: 1,
                             backgroundColor: Colors.green,
                             textColor: Colors.white,
-                            fontSize: 16.0
-                        );
+                            fontSize: 16.0);
                       });
                     },
                     child: Text(
                       "Add",
                       style:
-                      TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                          TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
                     )))
           ],
         ),
